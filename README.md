@@ -29,7 +29,7 @@ cd MPFF-IS
 
 ### 2. 下载模型文件
 
-从huggingface上下载esm2_t33_650M_UR50D模型文件到MPFF-IS文件夹：
+从 Hugging Face 上下载 esm2_t33_650M_UR50D 模型文件到 MPFF-IS 文件夹：
 https://huggingface.co/facebook/esm2_t33_650M_UR50D
 
 或使用wget下载：
