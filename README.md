@@ -29,25 +29,29 @@ cd MPFF-IS
 
 ### 2. 下载模型文件
 
-从 Hugging Face 上下载 esm2_t33_650M_UR50D 模型文件到 MPFF-IS 文件夹：
+从Hugging Face上下载 esm2_t33_650M_UR50D.pt 模型文件到MPFF-IS文件夹：
 https://huggingface.co/facebook/esm2_t33_650M_UR50D
 
 或使用wget下载：
 
 ```bash
-wget https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t33_650M_UR50D.pt
+wget https://huggingface.co/facebook/esm2_t33_650M_UR50D/resolve/main/pytorch_model.bin
 ```
 
 ### 3. 运行代码
 
 直接进入环境，运行MPFF-IS.py：
 ```bash
-python MPFF-IS.py
+python MPFF-IS.py -f data/sample.csv  -m best_model.pth 
 ```
 
 ## 使用方法（Usage）
 
 以下为 `MPFF-IS` 的命令行参数说明及示例用法。
+
+### csv输入文件说明
+需要有SMILES列和Protein_sequence列，其他列可有可无。
+可输入多个文件，以文件夹的形式输入。
 
 ### 参数说明
 
