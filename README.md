@@ -4,9 +4,9 @@ A Molecular–Protein Fusion Framework for Discovery of KRAS G12D Inhibitors in 
 
 ## Environment setup and dependency installation
 
-请确保以下依赖版本一致：
+Please ensure that the following dependency versions are consistent:
 
-- **DGL (Deep Graph Library)**：2.4.0（需 CUDA 12.1 支持）  
+- **DGL (Deep Graph Library)**：2.4.0（Need CUDA 12.1 ）  
 - **DGL-LifeSci**：0.3.2  
 - **scikit-learn**：1.6.1  
 
@@ -29,7 +29,7 @@ cd MPFF-IS
 
 ### 2. Download model file
 
-从Hugging Face上下载 esm2_t33_650M_UR50D.pt 模型文件到MPFF-IS文件夹：
+Download the esm2_t33_650M_UR50D.pt model file from Hugging Face to the MPFF-IS folder.
 https://huggingface.co/facebook/esm2_t33_650M_UR50D
 
 
