@@ -29,7 +29,7 @@ cd MPFF-IS
 
 ### 2. 下载模型文件
 
-从huggingface上下载esm2_t33_650M_UR50D模型文件到本地：
+从huggingface上下载esm2_t33_650M_UR50D模型文件到MPFF-IS文件夹：
 https://huggingface.co/facebook/esm2_t33_650M_UR50D
 
 或使用wget下载：
@@ -42,7 +42,7 @@ wget https://huggingface.co/facebook/esm2_t33_650M_UR50D/resolve/main/pytorch_mo
 
 直接进入环境，运行MPFF-IS.py：
 ```bash
-python main.py
+python MPFF-IS.py
 ```
 
 ## 使用方法（Usage）
@@ -68,7 +68,7 @@ python main.py
 
 #### **① 使用单个 CSV 文件进行预测**
 ```bash
-python your_script.py \
+python MPFF-IS.py \
     -f data/sample.csv \
     -m best_model.pth \
     -bs 64 \
@@ -78,7 +78,7 @@ python your_script.py \
 
 #### **② 使用包含多个 CSV 文件的文件夹进行预测**
 ```bash
-python your_script.py \
+python MPFF-IS.py \
     -F data/folder/ \
     -m best_model.pth \
     -bs 64 \
