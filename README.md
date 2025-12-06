@@ -1,6 +1,6 @@
 # MPFF-IS
 A Molecular–Protein Fusion Framework for Discovery of KRAS G12D Inhibitors in Pancreatic Ductal Adenocarcinoma
-
+![Figure] (https://github.com/Frozen-Zephyr/MPFF-IS/blob/main/pictures/flow%20chart.jpeg)
 
 ## Environment setup and dependency installation
 
