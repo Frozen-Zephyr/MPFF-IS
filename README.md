@@ -2,7 +2,7 @@
 A Molecular–Protein Fusion Framework for Discovery of KRAS G12D Inhibitors in Pancreatic Ductal Adenocarcinoma
 
 
-## 环境设置与依赖安装
+## Environment setup and dependency installation
 
 请确保以下依赖版本一致：
 
@@ -10,7 +10,7 @@ A Molecular–Protein Fusion Framework for Discovery of KRAS G12D Inhibitors in 
 - **DGL-LifeSci**：0.3.2  
 - **scikit-learn**：1.6.1  
 
-建议使用 Conda 创建独立环境：
+It is recommended to use Conda to create a standalone environment:
 
 ```bash
 pip install dgl-cu121==2.4.0
@@ -18,59 +18,55 @@ pip install dgllife==0.3.2
 pip install scikit-learn==1.6.1
 ```
 
-## 快速开始
+## Quick Start
 
-### 1. 克隆仓库
+### 1. Cloning repository
 
 ```bash
 git clone https://github.com/Frozen-Zephyr/MPFF-IS.git
 cd MPFF-IS
 ```
 
-### 2. 下载模型文件
+### 2. Download model file
 
 从Hugging Face上下载 esm2_t33_650M_UR50D.pt 模型文件到MPFF-IS文件夹：
 https://huggingface.co/facebook/esm2_t33_650M_UR50D
 
-或使用wget下载：
 
-```bash
-wget https://huggingface.co/facebook/esm2_t33_650M_UR50D/resolve/main/pytorch_model.bin
-```
 
-### 3. 运行代码
+### 3. Run code
 
-直接进入环境，运行MPFF-IS.py：
+Enter the environment directly and run MPFF-IS.py:
 ```bash
 python MPFF-IS.py -f data/sample.csv  -m best_model.pth 
 ```
 
-## 使用方法（Usage）
+## Usage
 
-以下为 `MPFF-IS` 的命令行参数说明及示例用法。
+The following is an explanation of the command-line parameters and example usage of `MPFF-IS`.
 
-### csv输入文件说明
-需要有SMILES列和Protein_sequence列，其他列可有可无。
-可输入多个文件，以文件夹的形式输入。
+### CSV input file instructions
+The application must have SMILES and Protein_sequence columns; other columns are optional.
+Multiple files can be entered, in the form of folders.
 
-### 参数说明
+### Parameter Description
 
-| 参数 | 类型 | 默认值 | 说明 |
+| Parameter | Type | Default | Description |
 |------|------|--------|------|
-| `-f` | str  | 无 | 输入单个 CSV 文件路径 |
-| `-F` | str  | 无 | 输入包含多个 CSV 文件的文件夹路径（不可与 `-f` 同时使用） |
-| `-m` | str  | best_model.pth | 指定推理使用的模型文件 |
-| `-s` | int  | 42 | 随机种子 |
+| `-f` | str  |  | Input single CSV file path |
+| `-F` | str  |  | Input folder path containing multiple CSV files (cannot be used with `-f`) |
+| `-m` | str  | best_model.pth | Specify the model file used for inference |
+| `-s` | int  | 42 | Random seed |
 | `-bs` | int | 64 | Batch size |
-| `-c` | int | 0 | 数据可用性检查：`0=检查`，`1=跳过检查` |
+| `-c` | int | 0 | Data availability check: `0=check`, `1=skip check` |
 
-> 注意：`-f` 与 `-F` **不能同时使用**。
+> Note: `-f` and `-F` **cannot be used simultaneously**.
 
 ---
 
-### 基础使用示例
+### Basic usage example
 
-#### **① 使用单个 CSV 文件进行预测**
+#### **① Predict using a single CSV file**
 ```bash
 python MPFF-IS.py \
     -f data/sample.csv \
@@ -80,7 +76,7 @@ python MPFF-IS.py \
     -c 0
 ```
 
-#### **② 使用包含多个 CSV 文件的文件夹进行预测**
+#### **② Predict using a folder containing multiple CSV files**
 ```bash
 python MPFF-IS.py \
     -F data/folder/ \
@@ -90,9 +86,9 @@ python MPFF-IS.py \
     -c 0
 ```
 
-## 结果说明
+## Result Description
 
-结果会输出到MPFF-IS/results文件夹下，以输入文件名命名。
+The results will be output to the MPFF-IS/results folder, named after the input file.
 
 
 
