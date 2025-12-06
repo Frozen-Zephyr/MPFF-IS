@@ -88,3 +88,11 @@ python MPFF-IS.py \
     -bs 64 \
     -s 42 \
     -c 0
+```
+
+## 结果说明
+
+结果会输出到MPFF-IS/results文件夹下，以输入文件名命名。
+
+
+
