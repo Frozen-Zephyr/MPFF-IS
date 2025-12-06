@@ -35,7 +35,7 @@ https://huggingface.co/facebook/esm2_t33_650M_UR50D
 或使用wget下载：
 
 ```bash
-wget https://huggingface.co/facebook/esm2_t33_650M_UR50D/resolve/main/pytorch_model.bin
+wget https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t33_650M_UR50D.pt
 ```
 
 ### 3. 运行代码
